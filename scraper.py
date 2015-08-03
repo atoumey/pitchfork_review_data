@@ -20,7 +20,7 @@ def scrapePage(url):
     
     return html
 
-while page < 3:
+while page < 30:
     print page
 
     review_index_html = scrapePage(getReviewIndexUrl())
