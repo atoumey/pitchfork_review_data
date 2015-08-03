@@ -1,6 +1,6 @@
 import scraperwiki, lxml.html, re, datetime
 
-page = 1
+page = 30
 
 def getReviewIndexUrl():
     return 'http://pitchfork.com/reviews/albums/{0}/'.format(page)
@@ -20,7 +20,7 @@ def scrapePage(url):
     
     return html
 
-while page < 30:
+while page < 100:
     print page
 
     review_index_html = scrapePage(getReviewIndexUrl())
