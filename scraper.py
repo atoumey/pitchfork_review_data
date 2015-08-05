@@ -21,7 +21,7 @@ def scrapePage(url):
     
     return html
 
-while page < 2:
+while album != "Shields: B-Sides":
     print page
 
     review_index_html = scrapePage(getReviewIndexUrl())
