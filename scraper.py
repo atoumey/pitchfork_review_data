@@ -59,7 +59,7 @@ while page < 2:
         label, release_year = None, None
         label_and_release_year = review_tree.cssselect('div#main div.info h3')[0].text_content()
         print label_and_release_year
-        label_and_release_year_regex = re.search(r'(.*);.*(\d{4})', label_and_release_year)
+        label_and_release_year_regex = re.search(r'(.*);.*(\d{4})', label_and_release_year, re.DOTALL)
         if label_and_release_year_regex:
             label, release_year = label_and_release_year_regex.group(1, 2)
     
